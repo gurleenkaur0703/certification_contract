@@ -65,9 +65,9 @@ contract Certification {
     }
 
     function isVerified(
-        string memory _certificate_id
+        string memory certificate_id
     ) public view returns (bool) {
-        Certificate storage cert = certificates[_certificate_id];
+        Certificate storage cert = certificates[certificate_id];
         // Use assert to ensure the certificate's hash is not empty
         assert(bytes(cert.hashID).length != 0);
         return true;
